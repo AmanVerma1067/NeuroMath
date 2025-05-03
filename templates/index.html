@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Math Expression Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .upload-box {
+            border: 2px dashed #3498db;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            background: #f8fafc;
+        }
+        .result-box {
+            margin: 25px 0;
+            padding: 20px;
+            background: #f1f5f9;
+            border-radius: 5px;
+            border-left: 4px solid #3498db;
+        }
+        .math-expression {
+            font-family: 'Courier New', monospace;
+            font-size: 24px;
+            margin: 10px 0;
+            padding: 10px;
+            background: white;
+            display: inline-block;
+        }
+        .calculation-result {
+            font-size: 20px;
+            font-weight: bold;
+            color: #2c3e50;
+        }
+        .error-box {
+            color: #e74c3c;
+            padding: 15px;
+            background: #fde8e8;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        img.preview {
+            max-width: 100%;
+            margin-top: 20px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Handwritten Math Calculator</h1>
+    
+    <form method="POST" enctype="multipart/form-data">
+        <div class="upload-box">
+            <h3>Upload Image of Math Expression</h3>
+            <input type="file" name="image" accept="image/*" required>
+            <p>Supported formats: JPG, PNG</p>
+            <button type="submit">Calculate</button>
+        </div>
+    </form>
+
+    {% if image_url %}
+        <div class="result-box">
+            <h3>Uploaded Image:</h3>
+            <img src="{{ image_url }}" class="preview" alt="Uploaded math expression">
+        </div>
+    {% endif %}
+
+    {% if expr %}
+        <div class="result-box">
+            <h3>Recognized Expression:</h3>
+            <div class="math-expression">{{ expr }}</div>
+            
+            <h3>Calculation Result:</h3>
+            <div class="calculation-result">{{ result }}</div>
+        </div>
+    {% endif %}
+
+    {% if error %}
+        <div class="error-box">
+            <h3>Error:</h3>
+            <p>{{ error }}</p>
+            {% if "No math expression" in error %}
+                <p>Tips: Write clearly with space between numbers and operators.</p>
+            {% endif %}
+        </div>
+    {% endif %}
+</body>
+</html>
