@@ -1,7 +1,0 @@
-flask
-pytesseract
-opencv-python
-Pillow
-# tensorflow
-# scikit-learn
-# matplotlib
