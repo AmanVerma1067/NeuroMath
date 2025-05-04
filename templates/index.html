@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handwritten Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Handwritten Math Calculator</h1>
+            <p>Draw a mathematical expression (e.g., 12+34) and get the result</p>
+        </header>
+        
+        <main class="calculator-app">
+            <div class="input-section">
+                <div class="canvas-container">
+                    <canvas id="drawingCanvas" width="300" height="150"></canvas>
+                    <div class="canvas-overlay">Draw your expression here</div>
+                </div>
+                <!-- <div class="canvas-container">
+                    <canvas id="drawingCanvas" width="400" height="200"></canvas>
+                    <div class="canvas-overlay">Draw your expression here</div>
+                </div> -->
+                <div class="controls">
+                    <button id="clearBtn" class="btn secondary">
+                        <span class="icon">✕</span> Clear
+                    </button>
+                    <button id="calculateBtn" class="btn primary">
+                        <span class="icon">=</span> Calculate
+                    </button>
+                </div>
+            </div>
+            
+            <div class="output-section">
+                <div class="result-card">
+                    <h3>Recognized Expression</h3>
+                    <div id="expressionOutput" class="result-value">-</div>
+                </div>
+                
+                <div class="result-card">
+                    <h3>Calculated Result</h3>
+                    <div id="resultOutput" class="result-value highlight">-</div>
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p>Supports digits 0-9 and operators + - × ÷</p>
+        </footer>
+    </div>
+
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.python-version
+
+# Environment variables
+.env
+.env.local
+myenv2/
+
+# Uploads and temporary files
+static/uploads/*
+!static/uploads/.gitkeep  # Optional: keep empty folder
+
+# Dataset (if large)
+# dataset/
