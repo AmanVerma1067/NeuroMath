@@ -1,6 +1,7 @@
 # NeuroMath - Handwritten Mathematical Expression Solver
 
-![NeuroMath Logo](https://play-lh.googleusercontent.com/PrHkScw4sqBoemJfhBFrasRhlF96VY3VWALLW76Zupa3QTA6Pfe93Lz2QZgA7jzJ2Xs)  <!-- Replace with your actual logo -->
+<img src="https://play-lh.googleusercontent.com/PrHkScw4sqBoemJfhBFrasRhlF96VY3VWALLW76Zupa3QTA6Pfe93Lz2QZgA7jzJ2Xs" width="200" style="transition: transform 0.3s;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+<!-- ![NeuroMath Logo](https://play-lh.googleusercontent.com/PrHkScw4sqBoemJfhBFrasRhlF96VY3VWALLW76Zupa3QTA6Pfe93Lz2QZgA7jzJ2Xs)  Replace with your actual logo -->
 
 An intelligent web application that recognizes handwritten mathematical expressions (digits 0-9 and operators +, -, ×, ÷) and computes the results using PyTorch deep learning.
 
